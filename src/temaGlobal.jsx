@@ -4,6 +4,8 @@ import {ThemeProvider} from '@material-ui/core/styles'
 import theme from './temConfig'
 import Navbar from './components/Navbar'
 import Typography from '@material-ui/core/Typography'
+import Listas from './components/Listas'
+import Oculto from './components/Oculto'
 
 function App(){
     return(
@@ -15,9 +17,9 @@ function App(){
             <Button variant="contained" color="secondary">
               Botón
             </Button>
-            <Typography variant="h1" color="initial">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum minima nulla laborum nam? Suscipit quidem, ab eveniet natus corporis necessitatibus maiores incidunt mollitia et iste velit accusamus ducimus qui id!
-            </Typography>
+            <Listas />
+
+            <Oculto />
         </ThemeProvider>
     )
 }

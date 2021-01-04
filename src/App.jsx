@@ -53,7 +53,7 @@ function App() {
       size="large"
       >
         Fullwidth
-      </Button> 
+      </Button>
     </div>
   );
 }
