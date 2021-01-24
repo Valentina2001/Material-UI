@@ -23,7 +23,7 @@ const Listas = () =>{
                     <ListItemIcon>
                         <AndroidIcon />
                     </ListItemIcon>
-                    <ListItemText primary="Mi Segundo Elemento" />
+                    <ListItemText primary="Mi Segundo Element" />
                 </ListItem>
                 
                 <Divider />
