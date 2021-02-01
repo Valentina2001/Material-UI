@@ -7,22 +7,28 @@ const drawerWidth = 240
 const useStyles = makeStyles(theme =>({
     menuButton: {
         marginRight: theme.spacing(2),
+        [theme.breakpoints.up('sm')]: {
+            display: 'none',
+        },
     },
     title: {
         flexGrow: 1,
     },
     appBar: {
-        width: `calc(100% - ${drawerWidth}px)`,
-        marginLeft: drawerWidth,
+        [theme.breakpoints.up('sm')]: {
+            width: `calc(100% - ${drawerWidth}px)`,
+            marginLeft: drawerWidth,
+        },  
     },
 }))
 
-const Navbar = () => {
+const Navbar = (props) => {
     const classes = useStyles()
     return(
         <AppBar className={classes.appBar}>
             <Toolbar>
-                <IconButton color="inherit" aria-label="menu" className={classes.menuButton}>
+                <IconButton color="inherit" aria-label="menu" className={classes.menuButton}
+                onClick={() => props.accionAbrir()}>
                     <MenuIcon />
                 </IconButton>
                 <Typography variant="h6" className={classes.title}>

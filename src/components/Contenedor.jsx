@@ -1,6 +1,7 @@
 import React from 'react'
 import Navbar from './Navbar'
 import {
+    Hidden,
     makeStyles
 } from '@material-ui/core'
 import Cajon from './Cajon'
@@ -20,10 +21,28 @@ const estilos = makeStyles(theme => ({
 const Contenedor = () =>{
 
     const classes = estilos()
+    const [abrir, setAbrir] = React.useState(false)
+
+    const accionAbrir = () => {
+        setAbrir(!abrir)
+    }
+
     return (
         <div className={classes.root}>
-            <Navbar />
-            <Cajon />
+            <Navbar accionAbrir={accionAbrir}/>
+            <Hidden xsDown>
+                <Cajon 
+                    variant="permanent"
+                    open={true}
+                />
+            </Hidden>
+            <Hidden smUP>
+                <Cajon 
+                    variant="temporary"
+                    open={abrir}
+                    onClose={accionAbrir}
+                />
+            </Hidden>
             <div className={classes.content}>
                 <div className={classes.toolbar}></div>
                 Contenido
