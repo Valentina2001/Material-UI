@@ -5,6 +5,7 @@ import {
     makeStyles
 } from '@material-ui/core'
 import Cajon from './Cajon'
+import Cajita from './Cajita'
 
 const estilos = makeStyles(theme => ({
     root: {
@@ -45,7 +46,7 @@ const Contenedor = () =>{
             </Hidden>
             <div className={classes.content}>
                 <div className={classes.toolbar}></div>
-                Contenido
+                <Cajita />
             </div>
         </div>
     )
